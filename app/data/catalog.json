@@ -1,0 +1,70 @@
+[
+    {
+        "label": "ai_generator",
+        "img": "/catalog/ai_generator.png"
+    },
+    {
+        "label": "trending",
+        "img": "/catalog/trending.png"
+    },
+    {
+        "label": "brandnew",
+        "img": "/catalog/brandnew.png"
+    },
+    {
+        "label": "hot_onpremium",
+        "img": "/catalog/hot_onpremium.png"
+    },
+    {
+        "label": "gaming",
+        "img": "/catalog/gaming.png"
+    },
+    {
+        "label": "travel",
+        "img": "/catalog/travel.png"
+    },
+    {
+        "label": "spring_broll",
+        "img": "/catalog/spring_broll.png"
+    },
+    {
+        "label": "ai_generator",
+        "img": "/catalog/ai_generator.png"
+    },
+    {
+        "label": "trending",
+        "img": "/catalog/trending.png"
+    },
+    {
+        "label": "brandnew",
+        "img": "/catalog/brandnew.png"
+    },
+    {
+        "label": "hot_onpremium",
+        "img": "/catalog/hot_onpremium.png"
+    },
+    {
+        "label": "gaming",
+        "img": "/catalog/gaming.png"
+    },
+    {
+        "label": "brandnew",
+        "img": "/catalog/brandnew.png"
+    },
+    {
+        "label": "hot_onpremium",
+        "img": "/catalog/hot_onpremium.png"
+    },
+    {
+        "label": "gaming",
+        "img": "/catalog/gaming.png"
+    },
+    {
+        "label": "travel",
+        "img": "/catalog/travel.png"
+    },
+    {
+        "label": "spring_broll",
+        "img": "/catalog/spring_broll.png"
+    }
+]
