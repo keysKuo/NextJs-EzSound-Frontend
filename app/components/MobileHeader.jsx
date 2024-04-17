@@ -1,7 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useContext, useEffect } from "react";
 import { LuSearch } from "react-icons/lu";
+import { AuthContext } from "../context/AuthProvider";
+import { getAuth, signOut } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const MobileHeader = () => {
+    const { user, setUser } = useContext(AuthContext);
+    const auth = getAuth();
+    const router = useRouter();
+
+    useEffect(() => {}, [user]);
+
+    const handleLogout = () => {
+        signOut(auth)
+            .then(() => {
+                setUser({});
+                localStorage.clear();
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
+
     return (
         <div className="lg:fixed sticky w-full z-10 max-w-full bg-[#151919] flex items-center justify-end  top-0 right-0 gap-2">
             <a className="lg:hidden px-6 max-h-[2.5rem] block me-auto" href="/">
@@ -16,15 +39,33 @@ const MobileHeader = () => {
             </a>
 
             <div style={{ boxShadow: "rgba(11, 12, 12, 0.2)" }} className="header-right  p-4  flex gap-2 justify-end">
-                <button className="md:hidden block rotate-90 mx-1">
-                    <LuSearch size={20} />
-                </button>
+                {!user?.uid ? (
+                    <>
+                        <button className="md:hidden block rotate-90 mx-1">
+                            <LuSearch size={20} />
+                        </button>
 
-                <button className="text-xs bg-main px-3 py-2 rounded-lg">Pricing</button>
-                <button className="text-xs bg-[#71B190] px-3 py-2 rounded-lg">Sign Up</button>
-                <button className="text-xs bg-main px-3 py-2 rounded-lg">Log In</button>
+                        <button className="text-xs bg-main px-3 py-2 rounded-lg">Pricing</button>
+                        <button className="text-xs bg-[#71B190] px-3 py-2 rounded-lg">Sign Up</button>
+                        <Link href="/login" className="text-xs bg-main px-3 py-2 rounded-lg">
+                            Log In
+                        </Link>
 
-                <div></div>
+                        <div></div>
+                    </>
+                ) : (
+                    <>
+                        <button className="md:hidden block rotate-90 mx-1">
+                            <LuSearch size={20} />
+                        </button>
+
+                        <button className="text-xs bg-main px-3 py-2 rounded-lg">Pricing</button>
+                        <button className="text-xs bg-[#71B190] px-3 py-2 rounded-lg">Sign Up</button>
+                        <button onClick={handleLogout} className="text-xs bg-main px-3 py-2 rounded-lg">
+                            Log out
+                        </button>
+                    </>
+                )}
             </div>
         </div>
     );

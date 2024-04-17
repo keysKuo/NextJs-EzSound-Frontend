@@ -38,7 +38,7 @@ const FAQs = () => {
                 "active": activeTab === 1
             })}>
                 <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium my-4">Which plan is best for me?</div>
+                <div className="collapse-title text-lg font-medium my-4">Which plan is best for me?</div>
                 <div className="collapse-content text-sm text-[#BEC6C6]">
                     <p className="mb-5">
                         <strong>Uppbeat Free</strong> is great if you're getting started as a creator. It's for
@@ -64,7 +64,7 @@ const FAQs = () => {
                 "active": activeTab === 2
             })}>
                 <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium my-4">Is the music copyright free?</div>
+                <div className="collapse-title text-lg font-medium my-4">Is the music copyright free?</div>
                 <div className="collapse-content text-sm text-[#BEC6C6]">
                     <p className="mb-4">
                         Yes! You won’t have any copyright issues when using Uppbeat music correctly. If you’re a free
@@ -80,7 +80,7 @@ const FAQs = () => {
                 "active": activeTab === 3
             })}>
                 <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium my-4">How do artists get paid?</div>
+                <div className="collapse-title text-lg font-medium my-4">How do artists get paid?</div>
                 <div className="collapse-content text-sm text-[#BEC6C6]">
                     <p className="mb-4">
                         Everytime you download our artists’ music, whether that’s for free or with an Uppbeat Premium

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Carousel } from "../components/";
 import catalog from "../data/catalog.json";
 
