@@ -1,12 +1,12 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import SideBar from "./SideBar";
-import { MobileHeader } from "../components";
+import { LoginModal, MobileHeader } from "../components";
 import Footer from "./Footer";
-import "../firebase/config";
 import AuthProvider from "../context/AuthProvider";
+import { MainLayout } from "../layouts";
 
-const poppins = Poppins({ subsets: ["latin"], weight: "500" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 export const metadata = {
     title: "Uppbeat - Free Music For Creators",
@@ -21,7 +21,8 @@ export default function RootLayout({ children }) {
                     <link rel="shortcut icon" type="image/x-icon" href="/Logo.ico" />
                 </head>
                 <body className={poppins.className}>
-                    <div className="flex">
+                    <MainLayout>
+                        <LoginModal />
                         <SideBar />
                         <main className="flex-1">
                             <MobileHeader />
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
                             <div className="py-20"></div>
                             <Footer />
                         </main>
-                    </div>
+                    </MainLayout>
                 </body>
             </html>
         </AuthProvider>

@@ -6,19 +6,19 @@ import { AuthContext } from "../context/AuthProvider";
 import { getAuth, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { FaStar } from "react-icons/fa6";
 
 const MobileHeader = () => {
-    const { user, setUser } = useContext(AuthContext);
+    const { user, setUser, showLoginModal, setShowLoginModal } = useContext(AuthContext);
     const auth = getAuth();
     const router = useRouter();
 
     useEffect(() => {}, [user]);
 
-    const handleLogout = () => {
-        signOut(auth)
+    const handleLogout = async () => {
+        await signOut(auth)
             .then(() => {
-                setUser({});
-                localStorage.clear();
+                window.location.reload();
             })
             .catch((err) => {
                 console.log(err);
@@ -47,11 +47,14 @@ const MobileHeader = () => {
 
                         <button className="text-xs bg-main px-3 py-2 rounded-lg">Pricing</button>
                         <button className="text-xs bg-[#71B190] px-3 py-2 rounded-lg">Sign Up</button>
-                        <Link href="/login" className="text-xs bg-main px-3 py-2 rounded-lg">
+                        <button
+                            onClick={() => {
+                                setShowLoginModal(true);
+                            }}
+                            className="text-xs bg-main px-3 py-2 rounded-lg"
+                        >
                             Log In
-                        </Link>
-
-                        <div></div>
+                        </button>
                     </>
                 ) : (
                     <>
@@ -60,10 +63,38 @@ const MobileHeader = () => {
                         </button>
 
                         <button className="text-xs bg-main px-3 py-2 rounded-lg">Pricing</button>
-                        <button className="text-xs bg-[#71B190] px-3 py-2 rounded-lg">Sign Up</button>
-                        <button onClick={handleLogout} className="text-xs bg-main px-3 py-2 rounded-lg">
-                            Log out
+                        <button
+                            className="flex items-center justify-center gap-2 
+                            text-xs bg-[#71B190] px-3 py-2 rounded-lg"
+                        >
+                            <FaStar size={16} />
+                            Go Premium
                         </button>
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="w-[2rem] h-[2rem] rounded-full bg-transparent">
+                                <img className="rounded-full" src={user?.photoURL} alt="" />
+                            </div>
+                            <ul
+                                tabIndex={0}
+                                className="dropdown-content mt-5 z-[1] p-2 shadow bg-[#323434] rounded-2xl w-52"
+                            >
+                                <li
+                                    className="flex text-center cursor-default flex-col
+                                    text-[1.2rem] py-4 px-2 items-center justify-center"
+                                >
+                                    <h2 className="">{user?.displayName}</h2>
+                                    <button
+                                        className="w-full h-[2rem] bg-[#71B190] rounded-badge text-[0.62rem] px-2 
+                                        leading-3 my-4 hover:opacity-80
+                                        flex text-center items-center justify-center"
+                                    >
+                                        Manage your Uppbeat account
+                                    </button>
+
+                                    <span onClick={handleLogout} className="cursor-pointer text-[#71B190] text-[0.825rem] underline hover:no-underline">Log out</span>
+                                </li>
+                            </ul>
+                        </div>
                     </>
                 )}
             </div>

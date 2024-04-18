@@ -179,6 +179,7 @@ const Pricing = () => {
                                 Start now
                             </span>
                         </button>
+                        <h4 className="text-[1rem] text-[#fff] mb-4 leading-[1]">All the benefits of Premium, plus:</h4>
 
                         <ul className="block">
                             {pricing["business"]?.benefits?.map((bullet, index) => {

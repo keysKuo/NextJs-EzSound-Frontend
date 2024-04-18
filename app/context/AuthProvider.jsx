@@ -2,11 +2,13 @@
 import { getAuth } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import React, { createContext, useEffect, useState } from "react";
+import '../firebase/config';
 
 export const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
     const [user, setUser] = useState({});
+    const [showLoginModal, setShowLoginModal] = useState(false);
     const router = useRouter();
 
     const auth = getAuth();
@@ -32,5 +34,5 @@ export default function AuthProvider({ children }) {
         }
     }, [auth]);
 
-    return <AuthContext.Provider value={{ user, setUser }}>{children}</AuthContext.Provider>;
+    return <AuthContext.Provider value={{ user, setUser, showLoginModal, setShowLoginModal }}>{children}</AuthContext.Provider>;
 }

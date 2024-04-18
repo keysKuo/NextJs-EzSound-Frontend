@@ -24,7 +24,7 @@ import axios from "axios";
 const SideBar = () => {
     const [isExtended, setIsExtended] = useState(true);
     const currentPathname = usePathname();
-
+    
     const toggleSideBar = () => {
         setIsExtended((prev) => !prev);
     };

@@ -8,6 +8,7 @@ import SoundWave from "./SoundWave";
 import Pricing from "./Pricing";
 import ScrollCarousel from "./ScrollCarousel";
 import FAQs from './FAQs';
+import LoginModal from './LoginModal';
 
 export {
     AlbumHeading,
@@ -19,5 +20,6 @@ export {
     SoundFilter,
     SoundWave,
     Pricing,
-    FAQs
+    FAQs,
+    LoginModal
 };
