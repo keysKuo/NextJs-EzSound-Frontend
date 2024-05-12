@@ -2,7 +2,7 @@ import React from "react";
 import { CheckSVG, CrossSVG } from "../svg";
 import pricing from "../data/pricing.json";
 
-const Pricing = () => {
+const  Pricing = () => {
     return (
         <>
             <div

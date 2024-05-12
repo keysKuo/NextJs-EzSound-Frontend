@@ -61,7 +61,7 @@ const PricingPage = () => {
                     flex flex-col justify-start px-8 max-w-[20rem]"
                     >
                         <div className="payment-info-header flex items-center font-medium mb-2 text-[0.825rem] gap-2 text-[#A1A8AA]">
-                            <LuUnlink size={20} />
+                            <LuUnlink size={19} />
                             <span>Cancel Anytime</span>
                         </div>
                         <div className="payment-info-body flex gap-1 text-[0.7rem] text-[#A1A8AA]">
@@ -74,7 +74,7 @@ const PricingPage = () => {
                     flex flex-col justify-start px-8 max-w-[20rem]"
                     >
                         <div className="payment-info-header flex items-center font-medium mb-2 text-[0.825rem] gap-2 text-[#A1A8AA]">
-                            <LuLock size={20} />
+                            <LuLock size={19} />
                             <span>Secure Payment</span>
                         </div>
                         <div className="payment-info-body flex gap-1 text-[0.7rem] text-[#A1A8AA]">

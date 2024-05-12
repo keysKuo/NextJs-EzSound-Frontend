@@ -7,19 +7,19 @@ import SoundFilter from "./SoundFilter";
 import SoundWave from "./SoundWave";
 import Pricing from "./Pricing";
 import ScrollCarousel from "./ScrollCarousel";
-import FAQs from './FAQs';
-import LoginModal from './LoginModal';
+import FAQs from "./FAQs";
+import ModalRoot from "./RightModal/ModalRoot";
 
 export {
-    AlbumHeading,
-    Carousel,
-    ScrollCarousel,
-    FilterOptions,
-    MobileHeader,
-    Playlist,
-    SoundFilter,
-    SoundWave,
-    Pricing,
-    FAQs,
-    LoginModal
+   AlbumHeading,
+   Carousel,
+   ScrollCarousel,
+   FilterOptions,
+   MobileHeader,
+   Playlist,
+   SoundFilter,
+   SoundWave,
+   Pricing,
+   FAQs,
+   ModalRoot,
 };
