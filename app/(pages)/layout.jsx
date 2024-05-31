@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { Baloo_Bhaijaan_2 } from "next/font/google";
 import "./globals.css";
 import SideBar from "./SideBar";
 import { ModalRoot, MobileHeader } from "../components";
@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import AuthProvider from "../context/AuthProvider";
 import { MainLayout } from "../layouts";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600", "700"] });
+const baloo = Baloo_Bhaijaan_2({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
 export const metadata = {
    title: "Uppbeat - Free Music For Creators",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <head>
                <link rel="shortcut icon" type="image/x-icon" href="/Logo.ico" />
             </head>
-            <body className={poppins.className}>
+            <body className={baloo.className}>
                <MainLayout>
                   <ModalRoot />
                   <SideBar />

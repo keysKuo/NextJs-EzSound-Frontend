@@ -8,7 +8,7 @@ export default function Home() {
                 className="heading-home flex flex-nowrap justify-start items-start gap-[1rem] flex-col
             relative w-full padding-clamp-home-heading"
             >
-                <h1 className="truncate block max-w-full leading-10 lg:text-[3.3rem] text-[2.7rem] font-bold">
+                <h1 className="truncate block max-w-full leading-[3rem] lg:text-[3.3rem] text-[2.7rem] font-bold">
                     Free music for creators
                 </h1>
                 <h2 className="truncate leading-8 lg:text-[1.3rem] text-[1rem] font-bold mt-4">

@@ -6,6 +6,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import { LuX } from "react-icons/lu";
 import { GoogleSVG } from "../../svg";
+import Image from "next/image";
 
 export default function RegisterModal() {
    const auth = getAuth();
@@ -37,7 +38,7 @@ export default function RegisterModal() {
                      className="z-1 relative font-medium text-[0.825rem]
                                         flex items-center justify-center gap-1"
                   >
-                     <img src="/logo-text.png" alt="Uppbeat logo" className="uppbeat-logo" />
+                     <Image width={500} height={300} src="/logo-text.png" alt="Uppbeat logo" className="uppbeat-logo" />
                   </span>
 
                   <div className="p-2 rounded-full hover:opacity-70">
@@ -114,7 +115,7 @@ export default function RegisterModal() {
                      </button>
                   </form>
                   <p className="text-xs text-center ">
-                     Don't have an account?
+                     Don&apos;t have an account?
                      <span className="text-[#71B190] px-1 cursor-pointer hover:opacity-80">Sign up</span>
                   </p>
                </div>

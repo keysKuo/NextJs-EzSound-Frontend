@@ -53,4 +53,6 @@ const SoundWave = forwardRef(({ url, onFinish }, ref) => {
     );
 });
 
+SoundWave.displayName = "SoundWave";
+
 export default SoundWave;

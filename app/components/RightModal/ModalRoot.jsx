@@ -22,7 +22,7 @@ export default function ModalRoot() {
       return () => {
          document.body.removeEventListener("click", handleClickOutside);
       };
-   }, [modalOptions]);
+   }, [modalOptions, setModalOptions]);
 
    return (
       <div className="flex">

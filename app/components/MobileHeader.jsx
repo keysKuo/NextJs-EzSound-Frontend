@@ -7,6 +7,7 @@ import { getAuth, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa6";
+import Image from "next/image";
 
 const MobileHeader = () => {
    const { user, setUser, modalOptions, setModalOptions } = useContext(AuthContext);
@@ -45,15 +46,15 @@ const MobileHeader = () => {
                      <LuSearch size={20} />
                   </button>
 
-                  <Link href="/pricing" className="text-xs bg-main px-3 py-2 rounded-lg">
+                  <Link href="/pricing" className="text-[0.825rem] bg-main px-3 pt-2 pb-1 rounded-lg">
                      Pricing
                   </Link>
-                  <button className="text-xs bg-[#71B190] px-3 py-2 rounded-lg">Sign Up</button>
+                  <button className="text-xs bg-[#71B190] px-3 pt-2 pb-1 rounded-lg">Sign Up</button>
                   <button
                      onClick={() => {
                         setModalOptions({ ...modalOptions, isOpened: true });
                      }}
-                     className="text-xs bg-main px-3 py-2 rounded-lg"
+                     className="text-xs bg-main px-3 pt-2 pb-1 rounded-lg"
                   >
                      Log In
                   </button>
@@ -64,19 +65,25 @@ const MobileHeader = () => {
                      <LuSearch size={20} />
                   </button>
 
-                  <Link href="/pricing" className="text-xs bg-main px-3 py-2 rounded-lg">
+                  <Link href="/pricing" className="text-xs bg-main px-3 pt-2 pb-1 rounded-lg">
                      Pricing
                   </Link>
                   <button
                      className="flex items-center justify-center gap-2 
-                            text-xs bg-[#71B190] px-3 py-2 rounded-lg"
+                            text-xs bg-[#71B190] px-3 pt-2 pb-1 rounded-lg"
                   >
                      <FaStar size={16} />
                      Go Premium
                   </button>
                   <div className="dropdown dropdown-end">
                      <div tabIndex={0} role="button" className="w-[2rem] h-[2rem] rounded-full bg-transparent">
-                        <img className="rounded-full w-full h-full" src={user?.photoURL} alt="" />
+                        <Image
+                           width={500}
+                           height={30}
+                           className="rounded-full w-full h-full"
+                           src={user?.photoURL}
+                           alt=""
+                        />
                      </div>
                      <ul tabIndex={0} className="dropdown-content mt-5 z-[1] p-2 shadow bg-[#323434] rounded-2xl w-52">
                         <li

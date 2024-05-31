@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <footer className="footer-bottom flex sm:flex-row flex-col md:items-stretch items-center md:space-y-0 space-y-10 justify-between padding-clamp-footer border-t border-main">
-            <div className="relative footer-box min-w-[276px] md:w-[25%] w-[100%] flex flex-col md:items-start items-center pe-[1rem]">
+            <div className="relative footer-box min-w-[276px] md:w-[25%] w-[100%] flex flex-col md:items-start pe-[1rem]">
                 <a className="cursor-pointer">
                     <svg
                         className="footer-logo w-[150px] h-[50px] mb-4"
@@ -92,8 +92,8 @@ const Footer = () => {
                         </g>
                     </svg>
                 </a>
-                <p className="footer-text text-[#A1A8AA] text-[0.825rem] leading-5">
-                    The essential music &amp; sound effects resource for creators worldwide. Home to the world's hottest
+                <p className="footer-text text-[#A1A8AA] text-[1rem] leading-5">
+                    The essential music &amp; sound effects resource for creators worldwide. Home to the world&apos;s hottest
                     artists. Whitelist your channels. Better than any royalty-free or stock music.
                 </p>
                 <a className="md:absolute relative bottom-0 cursor-pointer m-0 text-[#71b190] text-right me-[0.5rem] text-[0.825rem] font-medium block">
@@ -101,7 +101,7 @@ const Footer = () => {
                 </a>
             </div>
 
-            <div className="relative footer-box min-w-[276px] md:w-[25%] w-[100%] flex flex-col md:items-start items-center pe-[1rem]">
+            <div style={{ margin: '0'}} className="relative footer-box min-w-[276px] md:w-[25%] w-[100%] flex flex-col md:items-start pe-[1rem]">
                 <a className="cursor-pointer">
                     <svg
                         className="footer-logo mb-4 w-[150px] h-[50px]"
@@ -190,7 +190,7 @@ const Footer = () => {
                         ></path>
                     </svg>
                 </a>
-                <p className="footer-text text-[#A1A8AA] text-[0.825rem] leading-5 ">
+                <p className="footer-text text-[#A1A8AA] text-[1rem] leading-5 ">
                     The ultimate music &amp; sound effects subscription for your organisation. Whitelist up to 10
                     channels and enjoy full clearance for paid advertising and client content.
                 </p>
@@ -220,7 +220,7 @@ const Footer = () => {
                         User Agreement
                     </li>
                 </ul>
-                <div className="footer-social-icons flex my-[1rem] gap-3">
+                {/* <div className="footer-social-icons flex my-[1rem] gap-3">
                     <div className="icon flex items-center justify-center max-w-[1.25rem] max-height-[1.25rem]">
                         <a href="" target="_blank">
                             <div className="flex items-center justify-center max-w-[1.25rem] max-h-[1.25rem] transition-texts">
@@ -258,7 +258,7 @@ const Footer = () => {
                         </a>
                     </div>
                     
-                </div>
+                </div> */}
 
                 <p className="copy-right text-[0.75rem] text-center">
                     Copyright © 2024 Music Vine Limited. Uppbeat is a Music Vine Limited brand

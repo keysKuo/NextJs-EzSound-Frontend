@@ -28,7 +28,7 @@ const SideBar = () => {
     const toggleSideBar = () => {
         setIsExtended((prev) => !prev);
     };
-
+    
     return (
         <aside
             className={classNames({
