@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 20.x]
+        node-version: [20.x]
 
     steps:
     - name: Checkout code
@@ -38,7 +38,7 @@ jobs:
     - name: Deploy with Docker Compose
       run: |
         ssh -o StrictHostKeyChecking=no nkeyskuo@14.225.192.64
-          'cd /var/www/ezticket.io.vn &&
+          "cd /var/www/ezticket.io.vn &&
            docker-compose down &&
-           docker-compose up -d --build'
+           docker-compose up -d --build"
        
