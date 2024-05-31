@@ -22,7 +22,7 @@ jobs:
 
     - name: Copy files to Server
       run: |
-        sudo scp -r . nkeyskuo@14.225.192.64:/var/www/ezticket.io.vn/frontend
+        scp -r . nkeyskuo@14.225.192.64:/var/www/ezticket.io.vn/frontend
     
     - name: Deploy with Docker Compose
       run: |
