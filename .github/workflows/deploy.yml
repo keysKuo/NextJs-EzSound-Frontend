@@ -37,5 +37,5 @@ jobs:
     
     - name: Deploy with Docker Compose
       run: |
-        ssh -o StrictHostKeyChecking=no nkeyskuo@14.225.192.64 "cd /var/www/ezticket.io.vn/frontend && git pull && cd .. && docker-compose down && docker-compose up -d --build"
+        ssh -o StrictHostKeyChecking=no nkeyskuo@14.225.192.64 "cd /var/www/ezticket.io.vn/frontend && git reset --hard && git pull && cd .. && docker-compose down && docker-compose up -d --build"
       
