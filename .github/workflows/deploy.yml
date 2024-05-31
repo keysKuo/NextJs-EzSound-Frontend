@@ -9,21 +9,36 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'  
+
+    # - name: Setup SSH
+    #   run: |
+    #       mkdir -p ~/.ssh
+    #       echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/github_actions_key
+    #       chmod 600 ~/.ssh/github_actions_key
+    #       ssh-keyscan -H 14.225.192.64 >> ~/.ssh/known_hosts
 
     - name: Setup SSH
-      run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/github_actions_key
-          chmod 600 ~/.ssh/github_actions_key
-          ssh-keyscan -H 14.225.192.64 >> ~/.ssh/known_hosts
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     
     - name: Deploy with Docker Compose
       run: |
-        ssh -v -i ~/.ssh/github_actions_key nkeyskuo@14.225.192.64 <<EOF 
-          cd /var/www/ezticket.io.vn
-          docker-compose down 
-          docker-compose up -d --build
-        EOF
+        ssh -o StrictHostKeyChecking=no nkeyskuo@14.225.192.64
+          'cd /var/www/ezticket.io.vn &&
+           docker-compose down &&
+           docker-compose up -d --build'
+       
