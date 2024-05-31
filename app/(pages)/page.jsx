@@ -9,7 +9,7 @@ export default function Home() {
             relative w-full padding-clamp-home-heading"
             >
                 <h1 className="truncate block max-w-full leading-[3rem] lg:text-[3.3rem] text-[2.7rem] font-bold">
-                    Free music for creators - Test
+                    Free music for creators
                 </h1>
                 <h2 className="truncate leading-8 lg:text-[1.3rem] text-[1rem] font-bold mt-4">
                     No copyright claim. Your favorite beatmakers
