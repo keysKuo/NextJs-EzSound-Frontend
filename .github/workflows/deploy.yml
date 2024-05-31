@@ -1,0 +1,27 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+    - name: Copy files to Server
+      run: |
+        scp -r . nkeyskuo@14.225.192.64:/var/www/ezticket.io.vn
+    
+    - name: Deploy with Docker Compose
+      run: |
+        ssh nkeyskuo@14.225.192.64 'cd /var/www/ezticket.io.vn && docker-compose down && docker-compose up -d --build'
