@@ -22,4 +22,4 @@ jobs:
     
     - name: Deploy with Docker Compose
       run: |
-        ssh nkeyskuo@14.225.192.64 'cd /var/www/ezticket.io.vn && docker-compose down && docker-compose up -d --build'
+        ssh -i ~/.ssh/github_actions_key nkeyskuo@14.225.192.64 'cd /var/www/ezticket.io.vn && docker-compose down && docker-compose up -d --build'
