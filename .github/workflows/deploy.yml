@@ -19,6 +19,8 @@ jobs:
           echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/github_actions_key
           chmod 600 ~/.ssh/github_actions_key
           ssh-keyscan -H 14.225.192.64 >> ~/.ssh/known_hosts
+          ssh-copy-id -i ~/.ssh/github_actions_key.pub nkeyskuo@14.225.192.64
+
     
     - name: Deploy with Docker Compose
       run: |
