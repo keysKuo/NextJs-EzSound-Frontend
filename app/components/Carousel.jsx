@@ -50,6 +50,7 @@ const Carousel = ({ photos }) => {
                {photos.map((photo, index) => (
                   <div key={index} className="carousel-item">
                      <Image
+                        layout="responsive"
                         width={500}
                         height={30}
                         src={photo}

@@ -68,6 +68,7 @@ const Playlist = ({}) => {
                            className="w-16 h-16 min-w-16 "
                         >
                            <Image
+                              layout="responsive"
                               width={500}
                               height={30}
                               alt="image"
@@ -77,6 +78,7 @@ const Playlist = ({}) => {
                            <div className="absolute top-0 left-0 z-10 flex items-center justify-center overflow-hidden ">
                               {!waveSurferRefs[index]?.current?.isPlaying() ? (
                                  <Image
+                                    layout="responsive"
                                     width={500}
                                     height={30}
                                     alt="image"
@@ -85,6 +87,7 @@ const Playlist = ({}) => {
                                  />
                               ) : (
                                  <Image
+                                    layout="responsive"
                                     width={500}
                                     height={30}
                                     alt="image"

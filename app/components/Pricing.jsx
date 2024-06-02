@@ -17,6 +17,7 @@ const Pricing = () => {
             >
                <div className="pricing-image w-full h-[8rem] overflow-hidden relative">
                   <Image
+                     layout="responsive"
                      width={500}
                      height={30}
                      alt="free banner"
@@ -77,6 +78,7 @@ const Pricing = () => {
                <div className="pricing-tag text-[0.8rem] text-[#fff] py-4 px-3">Popular with creators</div>
                <div className="pricing-image w-full h-[8rem] overflow-hidden relative rounded-t-[0.75rem]">
                   <Image
+                     layout="responsive"
                      width={500}
                      height={30}
                      alt="premium banner"
@@ -94,6 +96,7 @@ const Pricing = () => {
                         <h2 className="text-[2rem] text-center font-bold mb-3 flex flex-row justify-center gap-2 items-center">
                            {pricing["premium"]?.label}
                            <Image
+                              layout="responsive"
                               width={30}
                               height={30}
                               alt="premium star"
@@ -146,6 +149,7 @@ const Pricing = () => {
             >
                <div className="pricing-image w-full h-[8rem] overflow-hidden relative">
                   <Image
+                     layout="responsive"
                      width={500}
                      height={30}
                      alt="business banner"

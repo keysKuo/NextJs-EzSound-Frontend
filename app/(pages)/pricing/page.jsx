@@ -51,15 +51,30 @@ const PricingPage = () => {
                      <span>Payment Methods</span>
                   </div>
                   <div className="payment-info-body flex gap-1 text-[0.8rem]">
-                     <Image width={500} height={300} alt="image" className="max-w-12 max-h-8 mt-1" src="/visa.png" />
                      <Image
+                        layout="responsive"
+                        width={500}
+                        height={300}
+                        alt="image"
+                        className="max-w-12 max-h-8 mt-1"
+                        src="/visa.png"
+                     />
+                     <Image
+                        layout="responsive"
                         width={500}
                         height={300}
                         alt="image"
                         className="max-w-12 max-h-8 mt-1"
                         src="/mastercard.png"
                      />
-                     <Image width={500} height={300} alt="image" className="max-w-12 max-h-8 mt-1" src="/amex.png" />
+                     <Image
+                        layout="responsive"
+                        width={500}
+                        height={300}
+                        alt="image"
+                        className="max-w-12 max-h-8 mt-1"
+                        src="/amex.png"
+                     />
                   </div>
                </div>
 

@@ -38,7 +38,14 @@ export default function RegisterModal() {
                      className="z-1 relative font-medium text-[0.825rem]
                                         flex items-center justify-center gap-1"
                   >
-                     <Image width={500} height={300} src="/logo-text.png" alt="Uppbeat logo" className="uppbeat-logo" />
+                     <Image
+                        layout="responsive"
+                        width={500}
+                        height={300}
+                        src="/logo-text.png"
+                        alt="Uppbeat logo"
+                        className="uppbeat-logo"
+                     />
                   </span>
 
                   <div className="p-2 rounded-full hover:opacity-70">

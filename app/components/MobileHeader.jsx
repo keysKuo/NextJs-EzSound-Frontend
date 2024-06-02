@@ -78,6 +78,7 @@ const MobileHeader = () => {
                   <div className="dropdown dropdown-end">
                      <div tabIndex={0} role="button" className="w-[2rem] h-[2rem] rounded-full bg-transparent">
                         <Image
+                           layout="responsive"
                            width={500}
                            height={30}
                            className="rounded-full w-full h-full"

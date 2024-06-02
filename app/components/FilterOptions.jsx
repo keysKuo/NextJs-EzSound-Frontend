@@ -74,7 +74,7 @@ const NonSuspenseFilterOptions = () => {
                         hidden: !type.icon,
                      })}
                   >
-                     <Image width={500} height={300} alt="image" src={type.icon} />
+                     <Image layout="responsive" width={500} height={300} alt="image" src={type.icon} />
                   </span>
                   <span className="text-[0.75rem] truncate">{type.label}</span>
                </Link>
