@@ -34,7 +34,7 @@ jobs:
     #     echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_rsa
     #     chmod 600 ~/.ssh/id_rsa
     #     ssh-keyscan -H 14.225.192.64 >> ~/.ssh/known_hosts
-    
+     
     - name: Deploy with Docker Compose
       run: |
         ssh -o StrictHostKeyChecking=no nkeyskuo@14.225.192.64 "cd /var/www/ezticket.io.vn/frontend && ./deploy.sh"
